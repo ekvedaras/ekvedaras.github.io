@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img id="photo" src="./assets/photo.png">
     <router-view/>
   </div>
 </template>
@@ -19,5 +19,9 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  #photo {
+    border-radius: 50%;
   }
 </style>
