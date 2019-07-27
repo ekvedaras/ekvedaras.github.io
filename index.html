@@ -10,7 +10,7 @@
 <script src="https://kit.fontawesome.com/83136e6a09.js"></script>
 <style>
     body {
-        font-size: 1.1em;
+        font-size: 14px;
         height: 100vh;
         background: #28a7d6;
         background: -moz-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
@@ -23,19 +23,38 @@
         width: 100px;
         height: 100px;
     }
+
+    @media (min-width: 600px) {
+        body {
+            font-size: 16px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        body {
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: 1000px) {
+        body {
+            /* Never get larger than this */
+            font-size: 20px;
+        }
+    }
 </style>
 <body class="flex flex-col items-center font-light">
-<div class="container lg:w-2/5 text-justify flex-1 text-white py-4">
+<div class="w-100 md:w-3/5 lg:w-2/5 text-justify flex-1 text-white py-4">
     <div class="flex flex-col items-center mb-10">
         <img src="photo.png" class="avatar rounded-full shadow-lg mb-4"/>
-        <h1 class="text-5xl font-light">Ernestas Kvedaras</h1>
+        <h1 class="text-5xl font-light text-center">Ernestas Kvedaras</h1>
         <div class="flex mx-auto items-baseline mt-2" style="width: fit-content">
             <span class="text-sm mr-2">web</span>
             <h3 class="font-light">Full Stack Developer</h3>
         </div>
     </div>
 
-    <p class="mb-10 mx-auto w-3/4">
+    <p class="mx-auto w-3/4">
         I value clean and readable code. I am passionate about <i class="fab fa-php"></i> PHP, <i
             class="fab fa-laravel"></i> Laravel and web development in general. My goal is
         to become one of the best and most wanted web developer.
