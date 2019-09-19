@@ -15,8 +15,50 @@
         background: #28a7d6;
         background: -moz-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
         background: -webkit-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
-        background: linear-gradient(135deg, #28a7d6 0%, #1e6ea0 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28a7d6', endColorstr='#1e6ea0', GradientType=1);
+
+        background: linear-gradient(135deg, #28a7d6, #1e6ea0);
+        background-size: 200% 200%;
+
+        -webkit-animation: background-flow 5s ease infinite;
+        -moz-animation: background-flow 5s ease infinite;
+        animation: background-flow 5s ease infinite;
+    }
+
+    @-webkit-keyframes background-flow {
+        0% {
+            background-position: 0 68%
+        }
+        50% {
+            background-position: 100% 33%
+        }
+        100% {
+            background-position: 0 68%
+        }
+    }
+
+    @-moz-keyframes background-flow {
+        0% {
+            background-position: 0 68%
+        }
+        50% {
+            background-position: 100% 33%
+        }
+        100% {
+            background-position: 0 68%
+        }
+    }
+
+    @keyframes background-flow {
+        0% {
+            background-position: 0 68%
+        }
+        50% {
+            background-position: 100% 33%
+        }
+        100% {
+            background-position: 0 68%
+        }
     }
 
     .avatar {
