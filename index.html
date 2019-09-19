@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ernestas Kvedaras</title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="touch.png">
 <script src="https://kit.fontawesome.com/83136e6a09.js"></script>
 <style>
     body {
-        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
         height: 100vh;
         background: #28a7d6;
         background: -moz-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
@@ -23,9 +25,9 @@
         background: linear-gradient(135deg, #28a7d6, #1e6ea0);
         background-size: 200% 200%;
 
-        -webkit-animation: background-flow 5s ease infinite;
-        -moz-animation: background-flow 5s ease infinite;
-        animation: background-flow 5s ease infinite;
+        -webkit-animation: background-flow 5s ease-in-out infinite;
+        -moz-animation: background-flow 5s ease-in-out infinite;
+        animation: background-flow 5s ease-in-out infinite;
     }
 
     @-webkit-keyframes background-flow {
@@ -69,6 +71,18 @@
         height: 100px;
     }
 
+    .icon-circle {
+        background: rgba(30, 110, 160, 0.8);
+    }
+
+    .link {
+        transition: .2s all ease;
+    }
+
+    .link:hover {
+        background: rgba(0, 60, 93, 0.8);
+    }
+
     @media (min-width: 600px) {
         body {
             font-size: 16px;
@@ -88,73 +102,90 @@
         }
     }
 </style>
-<body class="flex flex-col items-center font-light">
-<div class="w-100 md:w-3/5 lg:w-2/5 text-justify flex-1 text-white py-4">
-    <div class="flex flex-col items-center mb-10">
-        <img src="photo.png" class="avatar rounded-full shadow-lg mb-4"/>
-        <h1 class="text-5xl font-light text-center">Ernestas Kvedaras</h1>
-        <div class="flex mx-auto items-baseline mt-2" style="width: fit-content">
-            <span class="text-sm mr-2">web</span>
-            <h3 class="font-light">Full Stack Developer</h3>
+<body class="flex flex-col items-center">
+<div class="w-100 sm:w-4/5 lg:w-3/5 text-justify flex-1 text-white py-10">
+    <div class="flex flex-col lg:flex-row items-center lg:justify-center mb-12">
+        <img src="photo.png" class="avatar rounded-full shadow-lg mb-4 lg:mb-0 lg:mr-8"/>
+        <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-medium leading-tight md:leading-normal tracking-wide">Ernestas Kvedaras</h1>
+            <div class="flex mx-auto lg:mx-0 items-baseline mt-2 lg:mt-1" style="width: fit-content">
+                <span class="text-sm mr-2 font-light">web</span>
+                <h3>Full Stack Developer</h3>
+            </div>
         </div>
     </div>
 
-    <p class="mx-auto w-3/4">
+    <p class="mx-auto w-3/4 font-light">
         I value clean and readable code. I am passionate about <i class="fab fa-php"></i> PHP and web development in
         general. My goal is
         to become one of the best and most wanted web developer.
     </p>
 
-    <div class="mx-auto pt-10 text-lg" style="width: fit-content">
-        <div class="flex items-center mb-3">
-            <i class="far fa-id-card mr-2"></i>
-            <a href="/cv.html" target="_blank"
-               class="text-white no-underline hover:underline">CV</a>
-        </div>
-        <div class="flex items-center mb-3">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                 width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
-                 preserveAspectRatio="xMidYMid meet" class="w-5 h-5 mr-2">
-                <metadata>
-                    Created by potrace 1.11, written by Peter Selinger 2001-2013
-                </metadata>
-                <g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)"
-                   fill="#FFF" stroke="none">
-                    <path d="M1128 6415 c-2 -2 -30 -5 -63 -9 -73 -8 -222 -78 -280 -133 -88 -82
+    <div class="mx-auto pt-10 text-lg w-full" style="width: fit-content">
+        <a href="/cv.html" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <i class="far fa-id-card"></i>
+            </div>
+            CV
+        </a>
+        <a href="https://slapd.io" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
+                     preserveAspectRatio="xMidYMid meet" class="w-5 h-5">
+                    <metadata>
+                        Created by potrace 1.11, written by Peter Selinger 2001-2013
+                    </metadata>
+                    <g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)"
+                       fill="#FFF" stroke="none">
+                        <path d="M1128 6415 c-2 -2 -30 -5 -63 -9 -73 -8 -222 -78 -280 -133 -88 -82
 -145 -171 -180 -283 -17 -52 -18 -171 -21 -1880 -2 -1547 -1 -1836 11 -1895
 41 -199 192 -367 394 -440 55 -20 85 -20 2476 -23 1768 -2 2436 0 2480 8 33 7
 98 29 144 51 155 72 280 231 315 399 11 54 13 386 11 1895 -2 1668 -4 1835
 -19 1881 -70 218 -215 359 -425 412 -70 18 -169 19 -2457 19 -1311 0 -2385 -1
 -2386 -2z m4699 -588 c5 -5 9 -2791 4 -2890 -1 -16 -117 -17 -2333 -15 l-2331
 3 -1 1448 c-1 1103 2 1450 11 1455 15 9 4641 7 4650 -1z"/>
-                    <path d="M2548 1446 c-58 -16 -118 -55 -152 -99 -46 -60 -59 -105 -62 -217 -1
+                        <path d="M2548 1446 c-58 -16 -118 -55 -152 -99 -46 -60 -59 -105 -62 -217 -1
 -58 -3 -112 -3 -121 -1 -8 -53 -69 -117 -135 -64 -65 -124 -135 -134 -155 -22
 -41 -38 -123 -33 -165 13 -106 90 -206 187 -243 50 -19 83 -19 1276 -18 l1225
 2 57 28 c106 52 162 143 161 262 0 104 -25 147 -166 290 l-119 120 -2 121 c-2
 109 -5 127 -30 177 -32 67 -90 120 -160 146 -49 19 -84 20 -966 20 -708 0
 -926 -3 -962 -13z"/>
-                </g>
-            </svg>
-            <a href="https://slapd.io" target="_blank"
-               class="text-white no-underline hover:underline">slapd.io</a>
-        </div>
-        <div class="flex items-center mb-3">
-            <i class="fab fa-linkedin mr-3"></i>
-            <a href="https://www.linkedin.com/in/ernestas-kvedaras/" target="_blank"
-               class="text-white no-underline hover:underline">ernestas-kvedaras</a>
-        </div>
-        <div class="flex items-center mb-3">
-            <i class="fab fa-github-square mr-3"></i>
-            <a href="https://github.com/ekvedaras" target="_blank" class="text-white no-underline hover:underline">ekvedaras</a>
-        </div>
-        <div class="flex items-center mb-3">
-            <i class="fab fa-twitter-square mr-3"></i>
-            <a href="https://twitter.com/ekvedaras" target="_blank" class="text-white no-underline hover:underline">ekvedaras</a>
-        </div>
-        <div class="flex items-center">
-            <i class="fab fa-blogger mr-3"></i>
-            <a href="https://codegrowth.blogspot.com" target="_blank" class="text-white no-underline hover:underline">codegrowth</a>
-        </div>
+                    </g>
+                </svg>
+            </div>
+            slapd.io
+        </a>
+        <a href="https://www.linkedin.com/in/ernestas-kvedaras/" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <i class="fab fa-linkedin"></i>
+            </div>
+            ernestas-kvedaras
+        </a>
+        <a href="https://github.com/ekvedaras" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <i class="fab fa-github-square"></i>
+            </div>
+            ekvedaras
+        </a>
+        <a href="https://twitter.com/ekvedaras" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <i class="fab fa-twitter-square"></i>
+            </div>
+            ekvedaras
+        </a>
+        <a href="https://codegrowth.blogspot.com" target="_blank"
+           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                <i class="fab fa-blogger"></i>
+            </div>
+            codegrowth
+        </a>
     </div>
 </div>
 </body>
