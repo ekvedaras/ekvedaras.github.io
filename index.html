@@ -8,21 +8,36 @@
     <title>Ernestas Kvedaras</title>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="touch.png">
 <script src="https://kit.fontawesome.com/83136e6a09.js"></script>
-<style>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+    :root {
+        --bg: #fcfdff;
+        --bg-darker: rgba(0, 102, 255, 0.11);
+        --icon-circle: rgba(30, 110, 160, 0.8);
+        --link-hover: rgba(0, 94, 150, 0.8);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: #175870;
+            --bg-darker: #0a2434;
+            --icon-circle: rgba(30, 110, 160, 0.8);
+            --link-hover: rgba(56, 105, 134, 0.8);
+        }
+    }
     body {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         height: 100vh;
-        background: #28a7d6;
-        background: -moz-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
-        background: -webkit-linear-gradient(-45deg, #28a7d6 0%, #1e6ea0 100%);
+        background: var(--bg);
+        background: -moz-linear-gradient(-45deg, var(--bg) 0%, var(--bg-darker) 100%);
+        background: -webkit-linear-gradient(-45deg, var(--bg) 0%, var(--bg-darker) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28a7d6', endColorstr='#1e6ea0', GradientType=1);
 
-        background: linear-gradient(135deg, #28a7d6, #1e6ea0);
+        background: linear-gradient(135deg, var(--bg), var(--bg-darker));
         background-size: 200% 200%;
 
         -webkit-animation: background-flow 5s ease-in-out infinite;
@@ -72,7 +87,7 @@
     }
 
     .icon-circle {
-        background: rgba(30, 110, 160, 0.8);
+        background: var(--icon-circle);
     }
 
     .link {
@@ -80,7 +95,7 @@
     }
 
     .link:hover {
-        background: rgba(0, 60, 93, 0.8);
+        background: var(--link-hover);
     }
 
     @media (min-width: 600px) {
@@ -103,60 +118,70 @@
     }
 </style>
 <body class="flex flex-col items-center">
-<div class="w-100 sm:w-4/5 lg:w-3/5 text-justify flex-1 text-white py-10">
+<div class="w-100 sm:w-4/5 lg:w-3/5 text-justify flex-1 text-gray-800 dark:text-white py-10">
     <div class="flex flex-col lg:flex-row items-center lg:justify-center mb-12">
         <img src="photo.jpg" class="avatar rounded-full shadow-lg mb-4 lg:mb-0 lg:mr-8"/>
         <div class="text-center lg:text-left">
             <h1 class="text-5xl font-medium leading-tight md:leading-normal tracking-wide">Ernestas Kvedaras</h1>
             <div class="flex mx-auto lg:mx-0 items-baseline mt-2 lg:mt-1" style="width: fit-content">
                 <span class="text-sm mr-2 font-light">web</span>
-                <h3>Full Stack Developer</h3>
+                <h3>Full Stack Engineer</h3>
             </div>
         </div>
     </div>
 
     <p class="mx-auto w-3/4 font-light">
-        I value clean and readable code. I am passionate about <i class="fab fa-php"></i> PHP and web development in
-        general. My goal is
-        to become one of the best and most wanted web developer.
+        Full stack engineer with a primary focus on backend. Laravel is <span class="font-bold">The Goat</span> ♥️. Worked in various industries ranging from airport industry, to gaming, to insurance.
     </p>
 
     <div class="mx-auto pt-10 text-lg w-full" style="width: fit-content">
         <a href="/cv.html" target="_blank"
-           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+           class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md w-25 mx-auto">
             <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
-                <i class="far fa-id-card"></i>
+                <i class="far fa-id-card text-white"></i>
             </div>
             CV
         </a>
-        <a href="https://github.com/ekvedaras/redis-gui" target="_blank"
-           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
-            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
-                <img src="redis-gui.png" alt="Redis GUI" style="filter: brightness(0) invert(1)"/>
-            </div>
-            Redis GUI
-        </a>
-        <a href="https://www.linkedin.com/in/ernestas-kvedaras/" target="_blank"
-           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
-            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
-                <i class="fab fa-linkedin"></i>
-            </div>
-            ernestas-kvedaras
-        </a>
-        <a href="https://github.com/ekvedaras" target="_blank"
-           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
-            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
-                <i class="fab fa-github-square"></i>
-            </div>
-            ekvedaras
-        </a>
-        <a href="https://twitter.com/ekvedaras" target="_blank"
-           class="link text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
-            <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
-                <i class="fab fa-twitter-square"></i>
-            </div>
-            ekvedaras
-        </a>
+
+        <div class="flex justify-center space-x-2">
+            <a href="https://github.com/ekvedaras/redis-gui" target="_blank"
+               class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+                <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                    <img src="redis-gui.png" alt="Redis GUI" style="filter: brightness(0) invert(1)"/>
+                </div>
+                Redis GUI
+            </a>
+            <a href="https://plugins.jetbrains.com/plugin/16309-laravel-query" target="_blank"
+               class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+                <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                    <img src="laravel.png" alt="Laravel Query" style="filter: brightness(0) invert(1)"/>
+                </div>
+                Laravel Query
+            </a>
+        </div>
+        <div class="flex justify-center space-x-2">
+            <a href="https://www.linkedin.com/in/ernestas-kvedaras/" target="_blank"
+               class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+                <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                    <i class="fab fa-linkedin text-white"></i>
+                </div>
+                ernestas-kvedaras
+            </a>
+            <a href="https://github.com/ekvedaras" target="_blank"
+               class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+                <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                    <i class="fab fa-github-square text-white"></i>
+                </div>
+                ekvedaras
+            </a>
+            <a href="https://twitter.com/ekvedaras" target="_blank"
+               class="link text-gray-800 dark:text-white hover:text-white no-underline pr-4 flex items-center p-2 rounded-full hover:shadow-md">
+                <div class="icon-circle shadow-md rounded-full p-2 mr-2 w-10 h-10 flex items-center justify-center">
+                    <i class="fab fa-twitter-square text-white"></i>
+                </div>
+                ekvedaras
+            </a>
+        </div>
     </div>
 </div>
 </body>
